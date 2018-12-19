@@ -15,15 +15,22 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/driver', 'DriverController@all');
+$router->get('/driver', 'DriversController@all');
 
-$router->get('/driver/{id}', 'DriverController@one');
+$router->get('/driver/{id}', 'DriversController@one');
 
-$router->get('/races', 'RacesController@all');
+$router->get('/trip', 'TripsController@all');
 
-$router->get('/races/{id}', 'RacesController@one');
+$router->get('/trip/{id}', 'TripsController@one');
 
-$router->get('/passenger', 'PassengerController@all');
+$router->get('/passenger', 'PassengersController@all');
 
-$router->get('/passenger/{id}', 'PassengerController@one');
+$router->get('/passenger/{id}', 'PassengersController@one');
 
+$router->get('/user', 'UsersController@all');
+
+$router->get('/user/{id}', 'UsersController@one');
+
+$router->get('/permission', 'PermissionsController@all');
+
+$router->get('/permission/{id}', 'PermissionsController@one');
