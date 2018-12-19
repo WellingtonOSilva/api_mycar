@@ -14,3 +14,16 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/driver', 'DriverController@all');
+
+$router->get('/driver/{id}', 'DriverController@one');
+
+$router->get('/races', 'RacesController@all');
+
+$router->get('/races/{id}', 'RacesController@one');
+
+$router->get('/passenger', 'PassengerController@all');
+
+$router->get('/passenger/{id}', 'PassengerController@one');
+
