@@ -41,8 +41,8 @@ class Driver extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function tblRaces()
+    public function trips()
     {
-        return $this->hasMany('App\TblRace', 'id_driver', 'id_driver');
+        return $this->hasMany('App\Model\Trips', 'id_driver', 'id_driver');
     }
 }

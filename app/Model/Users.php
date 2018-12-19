@@ -36,8 +36,8 @@ class Users extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function tblPermission()
+    public function permission()
     {
-        return $this->belongsTo('App\TblPermission', 'permission', 'id_permission');
+        return $this->belongsTo('App\Model\Permissions', 'permission', 'id_permission');
     }
 }
