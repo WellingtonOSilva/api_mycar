@@ -40,16 +40,16 @@ class Passenger extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function tblPaymentMethod()
+    public function payment()
     {
-        return $this->belongsTo('App\TblPaymentMethod', 'id_payment', 'id_payment');
+        return $this->belongsTo('App\Model\Payment', 'id_payment', 'id_payment');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function tblRaces()
+    public function races()
     {
-        return $this->hasMany('App\TblRace', 'id_passenger', 'id_passenger');
+        return $this->hasMany('App\Model\Races', 'id_passenger', 'id_passenger');
     }
 }

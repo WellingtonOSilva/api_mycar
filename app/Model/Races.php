@@ -39,16 +39,16 @@ class Races extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function tblDriver()
+    public function driver()
     {
-        return $this->belongsTo('App\TblDriver', 'id_driver', 'id_driver');
+        return $this->belongsTo('App\Model\Driver', 'id_driver', 'id_driver');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function tblPassenger()
+    public function passenger()
     {
-        return $this->belongsTo('App\TblPassenger', 'id_passenger', 'id_passenger');
+        return $this->belongsTo('App\Model\Passenger', 'id_passenger', 'id_passenger');
     }
 }
