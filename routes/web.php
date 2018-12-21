@@ -11,6 +11,8 @@
 |
 */
 
+include 'user.php';
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
@@ -26,10 +28,6 @@ $router->get('/trip/{id}', 'TripsController@one');
 $router->get('/passenger', 'PassengersController@all');
 
 $router->get('/passenger/{id}', 'PassengersController@one');
-
-$router->get('/user', 'UsersController@all');
-
-$router->get('/user/{id}', 'UsersController@one');
 
 $router->get('/permission', 'PermissionsController@all');
 
